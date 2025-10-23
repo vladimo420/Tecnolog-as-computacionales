@@ -58,6 +58,7 @@ https://docs.python.org/3/library/statistics.html
 ##### Instrucciones
 
 1-Ejecuta en terminal
+
 2-Ingresa todos los valores númericos
 
 
