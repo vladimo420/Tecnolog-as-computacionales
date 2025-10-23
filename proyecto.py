@@ -20,3 +20,19 @@ def calcular_promedio(lista_estudiantes):
         suma += estudiante[1]  # operador aritmético
     promedio = suma / len(lista_estudiantes)
     return promedio
+
+
+
+
+# Avance 4:
+# Uso de estructuras condicionales (if / else)
+
+def contar_aprobados(lista_estudiantes, minimo_aprobacion):
+    """
+    Cuenta cuántos estudiantes aprobaron según el mínimo de aprobación.
+    """
+    aprobados = 0
+    for estudiante in lista_estudiantes:
+        if estudiante[1] >= minimo_aprobacion:
+            aprobados += 1
+    return aprobados
