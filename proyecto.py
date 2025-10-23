@@ -36,3 +36,22 @@ def contar_aprobados(lista_estudiantes, minimo_aprobacion):
         if estudiante[1] >= minimo_aprobacion:
             aprobados += 1
     return aprobados
+
+
+# Avance 5:
+# Uso de estructuras cíclicas (for)
+
+
+def generar_reporte(lista_estudiantes, minimo_aprobacion):
+    """
+    Genera un reporte general del grupo.
+    """
+    promedio = calcular_promedio(lista_estudiantes)
+    aprobados = contar_aprobados(lista_estudiantes, minimo_aprobacion)
+    reprobados = len(lista_estudiantes) - aprobados
+
+    return {
+        "promedio": round(promedio, 2),
+        "aprobados": aprobados,
+        "reprobados": reprobados
+    }
