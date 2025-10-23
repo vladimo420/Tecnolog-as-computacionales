@@ -11,11 +11,11 @@ Los datos que rrgresara el problema para resolver el problema son:
 - Almunos reprobados
 - Alumnos acreditados
 
-#####Referencias:
+##### Referencias:
 - https://www.superprof.mx/blog/la-educacion-en-mexico-y-la-cuestion-de-reprobar-ano/
 
 
-###Algoritmo
+### Algoritmo
     Eo _ Ingresar datos(cantidad_estudiantes, nombres, calificaciones, califi_aprobatoria)
             ingresa cantidad_estudiantes
             pide la cantidad de nombres en base a cantidad_estudiantes
