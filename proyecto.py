@@ -55,3 +55,43 @@ def generar_reporte(lista_estudiantes, minimo_aprobacion):
         "aprobados": aprobados,
         "reprobados": reprobados
     }
+
+
+
+# Avance 6:
+# Uso de listas para guardar datos.
+# Cada estudiante se guarda como una sublista [nombre, calificación],
+# formando una lista anidada.
+
+
+# ===============================================
+# Avance 7:
+# Implementación completa del programa principal.
+# ===============================================
+
+def main():
+    """
+    Función principal del programa.
+    """
+    num_estudiantes = int(input("Ingrese el número de estudiantes: "))
+    estudiantes = []
+
+    for i in range(num_estudiantes):
+        nombre = input(f"Ingrese el nombre del estudiante {i + 1}: ")
+        calificacion = float(input(f"Ingrese la calificación de {nombre}: "))
+        estudiantes.append([nombre, calificacion])  # lista anidada
+
+    minimo_aprobacion = float(input("Ingrese la calificación mínima para aprobar: "))
+
+    reporte = generar_reporte(estudiantes, minimo_aprobacion)
+
+    print("\n--- REPORTE FINAL ---")
+    print(f"Promedio general: {reporte['promedio']}")
+    print(f"Estudiantes aprobados: {reporte['aprobados']}")
+    print(f"Estudiantes reprobados: {reporte['reprobados']}")
+
+
+
+    # Punto de entrada
+if __name__ == "__main__":
+    main()
