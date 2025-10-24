@@ -1,6 +1,6 @@
 """
 Proyecto Final Python
-Simulador de calificaciones
+Control y registro de calificaciones
 Autor: [Vladimir Mondragon Galan]
 
 Descripción general:
@@ -9,12 +9,7 @@ calcular el promedio del grupo, y determinar cuántos aprobaron o reprobaron.
 Además, utiliza la API externa 'statistics' del módulo estándar de Python
 para calcular el promedio de manera eficiente.
 
-El programa cumple con los siguientes criterios:
-- No usa variables globales.
-- No utiliza print() ni input() dentro de funciones.
-- Usa listas anidadas, ciclos, operadores y condicionales.
-- Cumple las normas de estilo PEP 8.
-- Usa una API externa.
+
 """
 
 # =====================  BIBLIOTECAS  ==========================================
@@ -127,7 +122,7 @@ def main():
     print("             Instrucciones de uso             ")
     print(" Ingresa valores númericos mayores o iguales  0 ")
 
-    
+
     num_estudiantes = int(input("\nIngrese el número total de estudiantes: "))
 
     # Registro de estudiantes (lista anidada)
