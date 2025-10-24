@@ -1,0 +1,24 @@
+Sub-Competencia: plantea una situación problema que le permite aplicar y demostrar sus conocimientos de programación (avance 1)
+
+Error original: README y algoritmo ambos mal estructurados y realizados
+
+Cambio realizado: Reorganice el README desde 0 al igual que modifique completamente el algoritmo de lo que quería hacer
+
+Líneas de código donde se ve la corrección: Se muestra todo en el README
+
+
+
+
+
+Sub competencia:Separa el código en funciones pequeñas reusables, haciendo uso correcto de paso por parametros y return (avance 3)
+
+Error original: No era como tal un error, era más una forma mala de organizar la función main ya que se volvía confuso al tener muchos prints y no se llegaba a entender como funcionaba
+
+Cambio realizado: Cree dos funciones auxiliares que organizaran mejor el código a la hora de ejecutarse ya que se hacía muy difícil leer el código además de que se volvió más amigable para el usuario. Estas funciones se llamaron en main de una manera más limpia y ordenada
+
+Líneas de código donde se ve la corrección:
+
+Cambios función main():
+Los cambios realizados de funciones se pueden observar en la línea 129 y 135
+Creación de funciones auxiliares
+Las funciones creadas se pueden observar desde la línea 79 hasta la línea 106 
