@@ -120,7 +120,7 @@ def main():
     print("     Bienvenido al simulador de calificaciones  ")
     print("===============================================")
     print("             Instrucciones de uso             ")
-    print(" Ingresa valores númericos mayores o iguales  0 ")
+    print(" Ingresa valores númericos mayores o iguales  0")
 
 
     num_estudiantes = int(input("\nIngrese el número total de estudiantes: "))
@@ -138,7 +138,7 @@ def main():
     mostrar_reporte(reporte)
 
     print("\nGracias por usar el simulador de calificaciones.")
-    print("¡Hasta la próxima! ")
+    print("¡Hasta la próxima!")
 
 
 # ==============================================================================
