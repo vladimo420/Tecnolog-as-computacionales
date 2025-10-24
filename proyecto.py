@@ -1,35 +1,43 @@
+"""
+Programa: Evaluación de calificaciones (versión final con API externa)
+Autor: [Tu nombre]
+Descripción:
+Permite registrar nombres y calificaciones de estudiantes,
+calcula promedio, aprobados y reprobados usando una API externa (statistics).
+"""
 
-# Avance 2:
-# Uso de operadores aritméticos
+import statistics  
 
-# En este avance se usarán operaciones matemáticas simples
-# para calcular el promedio de calificaciones.
 
-# Avance 3:
-# Separación de código en funciones reutilizables.
+# ================= FUNCIONES =================
+
 
 def calcular_promedio(lista_estudiantes):
     """
-    Calcula el promedio general de las calificaciones.
+    Calcula el promedio general usando statistics.mean().
+    Parámetros:
+        lista_estudiantes (list): lista anidada con [nombre, calificación]
+    Retorna:
+        float: promedio general
     """
     if not lista_estudiantes:
         return 0.0
 
-    suma = 0
-    for estudiante in lista_estudiantes:
-        suma += estudiante[1]  # operador aritmético
-    promedio = suma / len(lista_estudiantes)
+    # Extrae solo las calificaciones (posición [1] de cada sublista)
+    calificaciones = [estudiante[1] for estudiante in lista_estudiantes]
+
+    promedio = statistics.mean(calificaciones)  
     return promedio
 
-
-
-
-# Avance 4:
-# Uso de estructuras condicionales (if / else)
 
 def contar_aprobados(lista_estudiantes, minimo_aprobacion):
     """
     Cuenta cuántos estudiantes aprobaron según el mínimo de aprobación.
+    Parámetros:
+        lista_estudiantes (list): lista anidada con [nombre, calificación]
+        minimo_aprobacion (float): nota mínima para aprobar
+    Retorna:
+        int: número de aprobados
     """
     aprobados = 0
     for estudiante in lista_estudiantes:
@@ -38,13 +46,14 @@ def contar_aprobados(lista_estudiantes, minimo_aprobacion):
     return aprobados
 
 
-# Avance 5:
-# Uso de estructuras cíclicas (for)
-
-
 def generar_reporte(lista_estudiantes, minimo_aprobacion):
     """
     Genera un reporte general del grupo.
+    Parámetros:
+        lista_estudiantes (list): lista anidada con [nombre, calificación]
+        minimo_aprobacion (float): nota mínima para aprobar
+    Retorna:
+        dict: contiene promedio, aprobados, reprobados
     """
     promedio = calcular_promedio(lista_estudiantes)
     aprobados = contar_aprobados(lista_estudiantes, minimo_aprobacion)
@@ -57,17 +66,8 @@ def generar_reporte(lista_estudiantes, minimo_aprobacion):
     }
 
 
+# ================= PROGRAMA PRINCIPAL =================
 
-# Avance 6:
-# Uso de listas para guardar datos.
-# Cada estudiante se guarda como una sublista [nombre, calificación],
-# formando una lista anidada.
-
-
-# ===============================================
-# Avance 7:
-# Implementación completa del programa principal.
-# ===============================================
 
 def main():
     """
@@ -91,7 +91,6 @@ def main():
     print(f"Estudiantes reprobados: {reporte['reprobados']}")
 
 
-
-    # Punto de entrada
+# Punto de entrada
 if __name__ == "__main__":
     main()
